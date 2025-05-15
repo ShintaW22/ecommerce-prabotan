@@ -29,7 +29,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('orders.history') }}">Riwayat Pemesanan</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-flex align-items-center">
+                            <img src="{{ auth()->user()->profile_photo ? asset('storage/'.auth()->user()->profile_photo) : 'https://ui-avatars.com/api/?name='.urlencode(auth()->user()->name).'&background=0D8ABC&color=fff' }}" class="rounded-circle me-2" width="32" height="32" alt="Foto Profil">
                             <a class="nav-link" href="{{ route('profile.edit') }}">Profil</a>
                         </li>
                         <li class="nav-item">
